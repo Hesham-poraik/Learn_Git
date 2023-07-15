@@ -82,6 +82,11 @@
     => git checkout -b branchname                      => make & select new branch.
     => git branch -m newbranchname                     => change current branchname.
     => git merge anotherbranchname                     => marge another branch to selected.
+    => git stash                                       => save staging area files in stash.
+    => git stash list                                  => show stash.
+    => git stash pop                                   => get from stash to staging area.
+    => git stash save "text"                           => save in stash with message.
+    => git stash apply                                 => copy not get
 
 # public key:
     => ssh-keygen -t algorism -b num -C "your email"   => to generate key.
