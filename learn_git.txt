@@ -41,31 +41,55 @@
   |  __________________        _____________          ___________                ___________  |
   | |working  directory|      |staging  area|        |local  repo|              |remote repo| |
   |  ‾‾‾‾‾‾‾|‾|‾‾‾‾‾‾‾‾        ‾‾‾‾‾|‾|‾‾‾‾‾          ‾‾‾‾|‾|‾‾‾‾                ‾‾‾‾|‾|‾‾‾‾  |
-  |         | |       git add       | |                   | |                        | |      |
-  |         | |-------------------->| |                   | |                        | |      |
-  |         | |                     | |     git commit    | |                        | |      |
-  |         | |      git reset      | |------------------>| |                        | |      |
+  |         | |       git add       | |     git commit    | |                        | |      |
+  |         | |-------------------->| |------------------>| |                        | |      |
+  |         | |                     | |                   | |                        | |      |
+  |         | |      git reset      | |                   | |                        | |      |
   |         | |<--------------------| |                   | |        git push        | |      |
   |         | |                     | |                   | |----------------------->| |      |
   |         | |    git checkout     | |                   | |                        | |      |
-  |         | |<------------------------------------------| |                        | |      |
-  |         | |                     | |                   | |        git fetch       | |      |
+  |         | |<------------------------------------------| |        git fetch       | |      |
   |         | |                     | |                   | |<-----------------------| |      |
-  |         | |                     | |                   | |                        | |      |
-  |         | |      git marge      | |                   | |                        | |      |
+  |         | |      git merge      | |                   | |                        | |      |
   |         | |<------------------------------------------| |                        | |      |
   |         | |                     | |                   | |                        | |      |
+  |         | |                     | |     git pull      | |                        | |      |
+  |         | |<---------------------------------------------------------------------| |      |
   |         |_|                     |_|                   |_|                        |_|      |
   |___________________________________________________________________________________________|
 ------------------------------------------------------------
+# GIT command:
+    => git clone [repo link]                           => to fetch repo form remote repo.
+    => git config --global user.name "username"        => set your user name.
+    => git config --global user.email "email"          => set your user name.
+    => git config --global --list                      => get username and email.
+    => git config --global --edit                      => edit by editor.
+    => git status                                      => find status for your files.
+    => git add [your files, *]                         => send file to staging area.
+    => git reset [your files, *]                       => down from staging area.
+    => git commit -m "created main structure"          => send for staging area to local repo.
+    => git branch                                      => get branch name.
+    => git remote                                      => get remote name.
+    => git push [remote name] [branch name]            => send form local to remote. [-u >> pull then push].
+    => git pull [remote name]                          => get changes form remote & marge with local.
+    => git config --list                               => to git configuration.
+    => git help config                                 => browse manual page.
+    => git init                                        => initialized empty repo ".git" file.
+    => git branch branchname                           => make new branch.
+    => git checkout branchname                         => select branch.
+    => git branch -d branchname                        => delete branch.
+    => git branch -D branchname                        => force delete.
+    => git checkout -b branchname                      => make & select new branch.
+    => git branch -m newbranchname                     => change current branchname.
+    => git merge anotherbranchname                     => marge another branch to selected.
 
-=> git clone [repo link]                           => to fetch repo form remote repo.
-=> git config --global user.name "username"        => set your user name.
-=> git config --global user.email "email"          => set your user name.
-=> git status                                      => find status for your files.
-=> git add [your files, *]                         => send file to staging area.
-=> git reset [your files, *]                       => down from staging area.
-=> git commit -m "created main structure"          => send for staging area to local repo.
-=> git branch                                      => get branch name.
-=> git remote                                      => get remote name.
-=> git push [remote name] [branch name]            => send form local to remote.
+# public key:
+    => ssh-keygen -t algorism -b num -C "your email"   => to generate key.
+    => ssh -T git@github.com                           => use key.
+    => when you use ssh you can make new repo from command:
+        - git remote add origin git@github.com:username/reponame.git
+    => without ssh:
+        - git remote add origin https://github.com/username/reponame.git
+
+# alias:
+    => git config -global alias.st "config --list"
