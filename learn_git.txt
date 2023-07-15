@@ -1,0 +1,72 @@
+------------------------------------------------------------
+==> GIT:
+     >> git is distributed version control system.
+     >> git is free and open source.
+     >> github is a source for project & sources [gitlab, bitbucket ...].
+     >> github simplify using git.
+     >> you can use git without github.
+     >> git has gui.
+------------------------------------------------------------
+==> why you must learn git??
+      >> developers contribute to the same project.
+      >> you can revert changes.
+      >> you can collaborate to fix issues.
+      >> you can collaborate to create now feature.
+      >> you can solve conflicts.
+      >> you can organize features.
+------------------------------------------------------------
+==> words!!
+      >> repository.
+      >> branch.
+      >> local repo.
+      >> remote repo.
+      >> commit (snapshot & checkpoint in your local repo).
+      >> clone (from local or remote repo).
+      >> push (upload local changes to remote repo).
+      >> pull (you pull changes fom remote to local repo).
+      >> pull request (tell other about your changes to pull it to remote repo).
+------------------------------------------------------------
+==> important notes:
+      >> create repository for every project.
+      >> create a new branch for every feature & enhancement.
+      >> no need to connect to remote repo when working.
+      >> any one can push & pull depend on permissions..
+------------------------------------------------------------
+==> md >> markdown language.
+        >> heading by [#].
+------------------------------------------------------------
+==> git cycle:
+/*
+|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+|                                    << GIT CYCLE >>                                        |
+|  __________________        _____________          ___________                ___________  |
+| |working  directory|      |staging  area|        |local  repo|              |remote repo| |
+|  ‾‾‾‾‾‾‾|‾|‾‾‾‾‾‾‾‾        ‾‾‾‾‾|‾|‾‾‾‾‾          ‾‾‾‾|‾|‾‾‾‾                ‾‾‾‾|‾|‾‾‾‾  |
+|         | |       git add       | |                   | |                        | |      |
+|         | |-------------------->| |                   | |                        | |      |
+|         | |                     | |     git commit    | |                        | |      |
+|         | |      git reset      | |------------------>| |                        | |      |
+|         | |<--------------------| |                   | |        git push        | |      |
+|         | |                     | |                   | |----------------------->| |      |
+|         | |    git checkout     | |                   | |                        | |      |
+|         | |<------------------------------------------| |                        | |      |
+|         | |                     | |                   | |        git fetch       | |      |
+|         | |                     | |                   | |<-----------------------| |      |
+|         | |                     | |                   | |                        | |      |
+|         | |      git marge      | |                   | |                        | |      |
+|         | |<------------------------------------------| |                        | |      |
+|         | |                     | |                   | |                        | |      |
+|         |_|                     |_|                   |_|                        |_|      |
+|___________________________________________________________________________________________|
+*/
+------------------------------------------------------------
+
+=> git clone [repo link]                           => to fetch repo form remote repo.
+=> git config --global user.name "hesham-poraik"   => set your user name.
+=> git status                                      => find status for your files.
+=> git add [your files, *]                         => send file to staging area.
+=> git reset [your files, *]                       => down from staging area.
+=> git commit -m "created main structure"          => send for staging area to local repo.
+=> git branch                                      => get branch name.
+=> git remote                                      => get remote name.
+=> git push [remote name] [branch name]            => send form local to remote.
