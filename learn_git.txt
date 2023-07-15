@@ -87,7 +87,10 @@
     => git stash pop                                   => get from stash to staging area.
     => git stash save "text"                           => save in stash with message.
     => git stash apply                                 => copy not get.
-    => git stash@{2}                                   => select ele in stash
+    => git stash pop stash@{n}                         => select ele in stash
+    => git stash drop stash@{n}                        => delete element.
+    => git stash show                                  => show element.
+    => git stash clear                                 => clear stash.
 
 # public key:
     => ssh-keygen -t algorism -b num -C "your email"   => to generate key.
