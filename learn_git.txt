@@ -107,7 +107,7 @@
     => git push origin -d vn.n                              => delete remote tag.
 
 # public key:
-    => ssh-keygen -t algorism -b num -C "your email"   => to generate key. [rsh, 4096]
+    => ssh-keygen -t algorism -b num -C "your email"   => to generate key. [rsa, 4096]
     => ssh -T git@github.com                           => use key.
     => when you use ssh you can make new repo from command:
         - git remote add origin git@github.com:username/reponame.git
