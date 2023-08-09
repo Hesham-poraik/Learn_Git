@@ -80,7 +80,7 @@
     => git branch -d branchname                             => delete branch.
     => git branch -D branchname                             => force delete.
     => git checkout -b branchname                           => make & select new branch.
-    => git branch -m newbranchname                          => change current branchname.
+    => git branch -M newbranchname                          => change current branchname.
     => git merge anotherbranchname                          => marge another branch to selected.
     => git stash                                            => save staging area files in stash.
     => git stash list                                       => show stash.
